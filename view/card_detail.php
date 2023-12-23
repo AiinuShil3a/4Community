@@ -1,3 +1,4 @@
+<?php $location = htmlspecialchars($_GET["location"]); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,65 +10,10 @@
 <body>
     <?php include_once '../component/navbar.php' ?>
     <div class="bodyCard">
-        <h2>Detail</h2>
-        <h1>NameforDB</h1>
+        <h1><?php echo $location  ?></h1>
+        <a href="./CreateCommunity.php?location=<?php echo $location  ?>"><button id="confirm" type="button" class="buttonGreen" >Create</button></a>
         <div class="rowCard">
-            <div class="columnCard">
-                <div class="card">
-                    <img src="../upload/404.jpg" alt="image" style="width:250px">
-                    <p>Bangkok</p>
-                    <p>Location</p>
-                    <a href="#"><button type="button" class="buttonGreen">Info</button></a>
-                </div>      
-            </div>
-            <div class="columnCard">
-                <div class="card">
-                    <img src="../upload/404.jpg" alt="image" style="width:250px">
-                    <p>Bangkok</p>
-                    <p>Location</p>
-                    <a href="#"><button type="button" class="buttonGreen">Info</button></a>
-                </div>      
-            </div>
-            <div class="columnCard">
-                <div class="card">
-                    <img src="../upload/404.jpg" alt="image" style="width:250px">
-                    <p>Bangkok</p>
-                    <p>Location</p>
-                    <a href="#"><button type="button" class="buttonGreen">Info</button></a>
-                </div>      
-            </div>
-            <div class="columnCard">
-                <div class="card">
-                    <img src="../upload/404.jpg" alt="image" style="width:250px">
-                    <p>Bangkok</p>
-                    <p>Location</p>
-                    <a href="#"><button type="button" class="buttonGreen">Info</button></a>
-                </div>      
-            </div>
-            <div class="columnCard">
-                <div class="card">
-                    <img src="../upload/404.jpg" alt="image" style="width:250px">
-                    <p>Bangkok</p>
-                    <p>Location</p>
-                    <a href="#"><button type="button" class="buttonGreen">Info</button></a>
-                </div>      
-            </div>
-            <div class="columnCard">
-                <div class="card">
-                    <img src="../upload/404.jpg" alt="image" style="width:250px">
-                    <p>Bangkok</p>
-                    <p>Location</p>
-                    <a href="#"><button type="button" class="buttonGreen">Info</button></a>
-                </div>      
-            </div>
-                        <div class="columnCard">
-                <div class="card">
-                    <img src="../upload/404.jpg" alt="image" style="width:250px">
-                    <p>Bangkok</p>
-                    <p>Location</p>
-                    <a href="#"><button type="button" class="buttonGreen">Info</button></a>
-                </div>      
-            </div>
+            <?php include_once '../controller/con_communityByLocation.php' ?>
         </div>
     </div>
 </body>

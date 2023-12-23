@@ -93,16 +93,18 @@ nav a{
     height: 100vh;
     color: azure;
     border-radius: 0.5rem;
+    font-size: 40px;
 
 }
 .cardIndex:hover{
     box-shadow: 0 4px 80px  rgba(3, 219, 35, 5);
 }
 
-.cardIndex1{
-    background-image: url(./upload/404.jpg);
+.cardIndexImages{
     width: 250px;
     height: 250px;
+    background-size: cover;/* สำคัญ */
+    background-position: center;/* สำคัญ */
 }
 
 /* Form */
@@ -261,6 +263,8 @@ input{
     padding: 16px;
     border-radius: 0.5rem;
     text-align: center;
+    background-color: black;
+    color: azure;
 }
 .card:hover{
     box-shadow: 0 4px 80px  rgba(3, 219, 35, 5);

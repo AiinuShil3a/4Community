@@ -16,34 +16,7 @@
             </div>
             <div class="rightIndex">
                 <div class="rowIndex">
-                    <div class="columnIndex">
-                        <a href="#">
-                            <div class="cardIndex cardIndex1">
-                                Bangkok
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columnIndex">
-                        <a href="#">
-                            <div class="cardIndex cardIndex1">
-                                Chiang Mai
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columnIndex">
-                        <a href="#">
-                            <div class="cardIndex cardIndex1">
-                                Phuket
-                            </div>
-                        </a>
-                    </div>
-                    <div class="columnIndex">
-                        <a href="#">
-                            <div class="cardIndex cardIndex1">
-                                Pattaya
-                            </div>
-                        </a>
-                    </div>
+                    <?php include_once './controller/con_community.php' ?>
                 </div>
             </div>
         </div>

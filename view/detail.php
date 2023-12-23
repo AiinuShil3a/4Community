@@ -1,3 +1,5 @@
+<?php $id = htmlspecialchars($_GET["id"]); ?>
+<?php include_once '../controller/con_communityById.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,22 +13,22 @@
     <div class="bodyForm">
         <div class="containerDetail">
             <div class="leftDetail">
-                <img src="../upload/404.jpg" alt="image" style="width:350px">
+                <img src="../upload/<?= $rs[0]['images'] ?>" alt="image" style="width:350px">
             </div>
             <div class="rightDetail">
-                <h4>Name</h4>
-                <h4>activity</h4>
-                <h4>location</h4>
+                <h4><?= $rs[0]['name'] ?></h4>
+                <h4><?= $rs[0]['activity'] ?></h4>
+                <h4><?= $rs[0]['location'] ?></h4> 
                 <div class="form-group">
                     <div class="positionCenter">
-                        <a href="#"><button type="button" class="buttonGreen">จอง</button></a>&nbsp;&nbsp;
-                        <a href="#"><button type="button" class="buttonYellow">แก้ไข</button></a>&nbsp;&nbsp;
-                        <a href="#"><button id="delete" type="button" class="buttonRed">ลบ</button></a>&nbsp;&nbsp;
+                        <a href="#"><button id="confirm" type="button" class="buttonGreen" >จอง</button></a>&nbsp;&nbsp;
+                        <a href="./UpdateCommunity.php?id=<?=$id?>"><button type="button" class="buttonYellow">แก้ไข</button></a>&nbsp;&nbsp;
+                        <a href="../controller/con_delete.php?id=<?=$id?>"><button id="delete" type="button" class="buttonRed" onclick="return confirm('คุณต้องการจะลบข้อมูลชุดนี้หรือไม่? แน่ใจนะ!!')">ลบ</button></a>&nbsp;&nbsp;
                     </div>
                 </div>
             </div>
         </div>
-        <script src="../script3.js"></script>
+        <script src="../confirm.js"></script>
     </div>
     </div>
 </body>
